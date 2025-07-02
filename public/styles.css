@@ -1,0 +1,183 @@
+/* Import modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Gradient background and layout */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Glassmorphism container */
+.container {
+    background: rgb(0 0 0 / 15%);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 32px 28px;
+    border-radius: 16px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* Input group styling */
+.input-group {
+    margin-bottom: 20px;
+
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+}
+
+input::placeholder {
+    color: #ddd;
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Submit Button */
+/* button {
+  background-color: #ffffff;
+  color: #4f46e5;
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #e0e7ff;
+  transform: translateY(-2px);
+} */
+
+
+
+button {
+    background: transparent;
+    color: #ffffff;
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 05px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Glowing animated background */
+button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            #00f0ff,
+            #0fffc1,
+            #a3f0ff,
+            #6fc4ff,
+            #00f0ff);
+    background-size: 400%;
+    filter: blur(25px);
+    opacity: 0.6;
+    animation: glowMove 8s linear infinite;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+button:hover::before {
+    opacity: 1;
+}
+
+button:hover {
+    color: #111;
+    background: #ffffff;
+}
+
+/* Animation for glowing movement */
+@keyframes glowMove {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(25%, 25%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+
+
+
+/* Text and links */
+p {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 0.95rem;
+    color: #f1f1f1;
+    /* text-align:center; margin-top: 15px; */
+}
+
+a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #c3dafe;
+}
+
+#error-list {
+  transition: opacity 0.5s ease;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard | MySaaS</title>
+  <link rel="stylesheet" href="/dashboard.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <header class="navbar">
+      <div class="logo">Dashboard</div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="/users/logout" class="btn btn-outline">Logout</a>
+    </header>
+
+  <section class="hero">
+    <h1>Welcome back, <span>User!</span></h1>
+    <p>Here's an overview of your SaaS application.</p>
+  </section>
+
+  <section class="dashboard-content">
+    <div class="card">
+      <h3>Active Users</h3>
+      <p>9,518+</p>
+    </div>
+    <div class="card">
+      <h3>Monthly Revenue</h3>
+      <p>₹120,340</p>
+    </div>
+    <div class="card">
+      <h3>Tickets Resolved</h3>
+      <p>1000+</p>
+    </div>
+  </section>
+
+
+
+
+<div style="color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 20px; padding: 40px;">
+<h1 style="font-size: 2.5rem; text-align: center;">Hello!!... <%= user.charAt(0).toUpperCase() + user.slice(1) %></h1>
+
+  <div style="display: flex; gap: 20px;">
+    <a href="/users/login" class="btn-link">Login</a>
+    <a href="/users/register" class="btn-link">Register</a>
+    <a href="/users/logout" class="btn-link">Logout</a>
+  </div>
+</div>
+
+    <footer id="contact" class="footer">
+      <p>&copy; 2025 MySaaS. All rights reserved.</p>
+      <p>
+        Contact us: <a href="mailto:support@mysaas.com">support@mysaas.com</a>
+      </p>
+    </footer>
+</body>
+</html>
+

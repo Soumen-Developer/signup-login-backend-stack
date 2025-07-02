@@ -1,0 +1,36 @@
+<% let showErrors = typeof errors !== 'undefined' && errors.length > 0; %>
+<% let showSuccess = typeof success_msg !== 'undefined' && success_msg; %>
+<% let showError = typeof error !== 'undefined' && error; %>
+
+<% if (showErrors) { %>
+  <ul id="error-list" class="alert error-alert">
+    <% errors.forEach(error => { %>
+      <li><%= error.message %></li>
+    <% }) %>
+  </ul>
+<% } %>
+
+<% if (showSuccess) { %>
+  <div class="alert success-alert">
+    <p><%= success_msg %></p>
+  </div>
+<% } %>
+
+<% if (showError) { %>
+  <ul id="error-list" class="alert error-alert">
+    <li><%= error %></li>
+  </ul>
+<% } %>
+
+<script>
+  setTimeout(() => {
+    const errorList = document.getElementById("error-list");
+    if (errorList) {
+      errorList.style.transition = "opacity 0.5s ease";
+      errorList.style.opacity = "0";
+      setTimeout(() => {
+        errorList.style.display = "none";
+      }, 500);
+    }
+  }, 4500);
+</script>
